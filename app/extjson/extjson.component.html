@@ -1,0 +1,21 @@
+<input type="text" [(ngModel)]="keyword">
+<div class="container">
+  <div class="row">
+    <div calss="col-md-3 form-group" *ngFor="let car of allcar | filter:keyword | paginate: { itemsPerPage: 5, currentPage: p }">
+      <img src="http://cybotrix.com/ios/img/{{car.image}}" style="height:120px; width:120px;">
+      <table class="table table-bordered">
+        <tr>
+          <th>{{car.model}}</th>
+          <th>--</th>
+        </tr>
+        <tr>
+          <td>{{car.mileage}}</td>
+          <td>{{car.fuelType}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div class="row">
+      <div class="col-sm-12 text-center"><pagination-controls (pageChange)="p = $event"></pagination-controls></div>
+      </div>
+</div>

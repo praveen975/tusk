@@ -1,0 +1,12 @@
+<p>
+  {{todaydate}}
+</p>
+ <div class="form-group">
+  <label for="sel1">Select list:</label>
+  <select class="form-control" >
+    <option value="1">choose</option>
+    <option *ngFor="let c of city" value="{{c}}">{{c}}</option>
+  </select>
+</div> 
+<p>hello</p>
+<h2 *ngFor="let i of cen">{{i.jobid}</h2>

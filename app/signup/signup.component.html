@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row" >
+    <div class="col-md-3">
+      <input type="text" [(ngModel)]="key">
+    </div>
+    <div class="col-md-3" *ngFor="let i of photo | filter:key">
+    <img src="../../assets/{{i.url}}">
+    <h4>{{i.title}}</h4>
+    <p>length is{{len}}</p>
+  </div>
+  </div>
+</div>
